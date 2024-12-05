@@ -1,29 +1,37 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Trata AI Docs",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "light": "/logo/trata-logo.png",
+    "dark": "/logo/trata-logo.png"
   },
-  "favicon": "/favicon.svg",
+  "modeToggle": {
+    "default": "light",
+    "isHidden": true
+  },
+  "favicon": "/logo/trata-favicon.png",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#1B2B65",
+    "light": "#1B2B65",
+    "dark": "#1B2B65",
+    "background": {
+      "light": "#F8F9FF",
+      "dark": "#F8F9FF"
+    },
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#1B2B65",
+      "to": "#1B2B65"
     }
   },
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:support@trata.ai"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://app.trata.ai"
   },
   "tabs": [
     {

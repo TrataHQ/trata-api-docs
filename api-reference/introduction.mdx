@@ -1,33 +1,46 @@
----
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
----
-
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
-
-## Welcome
-
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
-
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+Trata provides robust RESTful APIs that follows OpenAPI standards, allowing you to seamlessly integrate our services into your applications.
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+All API requests require authentication using an API key. You can obtain your API key from the [app settings page](https://app.trata.ai/settings).
 
-```json
-"security": [
-  {
-    "bearerAuth": []
+![API Key Location](/images/api_key.png)
+
+Include your API key in the request header:
+
+```bash
+Authorization: Bearer YOUR_API_KEY
+```
+
+### Example Request
+
+```javascript
+fetch('https://api.trata.ai/v1/users', {
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
   }
-]
+})
+```
+
+## Pagination
+
+Trata implements offset-based pagination for list apis to help you navigate through large datasets efficiently.
+
+### Pagination Parameters
+
+| Parameter | Type    | Description                                      |
+|-----------|---------|--------------------------------------------------|
+| skip      | integer | Starting position of the results (default: 0)    |
+| limit     | integer | Number of items to return per page (default: 10) |
+
+### Example Paginated Request
+
+```javascript
+// Fetch the second page with 10 items per page
+fetch('https://api.trata.ai/v1/items?skip=10&limit=10', {
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY'
+  }
+})
 ```

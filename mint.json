@@ -44,7 +44,7 @@
     },
     {
       "name": "Change Log",
-      "url": "change-log"
+      "url": "changelog"
     },
     {
       "name": "How-To Guides",
@@ -62,9 +62,16 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "home-page/quickstart"
+      ]
+    },
+    {
+      "group": "Features",
+      "pages": [
+        "home-page/AI-Agent",
+        "home-page/contacts",
+        "home-page/conversations",
+        "home-page/integrations"
       ]
     },
     {
@@ -76,9 +83,9 @@
       ]
     },
     {
-      "group": "Change Log",
+      "group": "Product Updates",
       "pages": [
-        "change-log/introduction"
+        "changelog/overview"
       ]
     }
   ],

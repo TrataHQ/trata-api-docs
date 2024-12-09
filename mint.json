@@ -58,6 +58,11 @@
       "url": "https://www.trata.ai/blogs"
     }
   ],
+  "analytics": {
+    "gtm": {
+      "tagId": "GTM-MMGFFH3T"
+    }
+  },
   "navigation": [
     {
       "group": "Get Started",
